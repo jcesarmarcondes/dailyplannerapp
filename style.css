@@ -1,72 +1,62 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f4;
 }
 
 header {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-  padding: 60px;
+ background-color: #333;
+ color: white;
+ padding: 10px 0;
+ text-align: center;
 }
 
-.description {
-  white-space: pre-wrap;
+#timeblocksContainer {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ padding: 20px;
 }
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
+.timeblock {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: white;
+ padding: 10px;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
+.time {
+ font-weight: bold;
 }
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
+.event {
+ flex-grow: 1;
+ margin: 0 10px;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+ background-color: #007BFF;
+ color: white;
+ border: none;
+ border-radius: 5px;
+
+ cursor: pointer;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+.saveBtn:hover {
+ background-color: #0056b3;
+}
+
+/* Color coding for timeblocks */
+.past {
+ background-color: #d3d3d3;
+}
+
+.present {
+ background-color: #ffc107;
+}
+
+.future {
+ background-color: #ffffff;
 }
